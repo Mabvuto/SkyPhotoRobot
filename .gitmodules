@@ -1,0 +1,3 @@
+[submodule "iOS/SkyPhotoRobot/iOS"]
+	path = iOS/SkyPhotoRobot/iOS
+	url = https://github.com/RedBearLab/iOS

@@ -13,6 +13,7 @@
 		663045111AD503E50036175E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 663045101AD503E50036175E /* Images.xcassets */; };
 		663045141AD503E50036175E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 663045121AD503E50036175E /* LaunchScreen.xib */; };
 		663045201AD503E50036175E /* SkyPhotoRobotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6630451F1AD503E50036175E /* SkyPhotoRobotTests.swift */; };
+		66D398F81AD50DFC00682A46 /* BLE.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D398F61AD50DFC00682A46 /* BLE.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,10 @@
 		663045191AD503E50036175E /* SkyPhotoRobotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkyPhotoRobotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6630451E1AD503E50036175E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6630451F1AD503E50036175E /* SkyPhotoRobotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyPhotoRobotTests.swift; sourceTree = "<group>"; };
+		66D398F51AD50DFC00682A46 /* BLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLE.h; path = iOS/BLEFramework/BLE/BLE.h; sourceTree = "<group>"; };
+		66D398F61AD50DFC00682A46 /* BLE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLE.m; path = iOS/BLEFramework/BLE/BLE.m; sourceTree = "<group>"; };
+		66D398F71AD50DFC00682A46 /* BLEDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLEDefines.h; path = iOS/BLEFramework/BLE/BLEDefines.h; sourceTree = "<group>"; };
+		66D398FA1AD50F6C00682A46 /* SkyPhotoRobotBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SkyPhotoRobotBridgingHeader.h; path = Source/SkyPhotoRobotBridgingHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +82,14 @@
 		663045061AD503E50036175E /* SkyPhotoRobot */ = {
 			isa = PBXGroup;
 			children = (
+				66D398F91AD50E0000682A46 /* RedBearLabBLE */,
 				663045091AD503E50036175E /* AppDelegate.swift */,
 				6630450B1AD503E50036175E /* ViewController.swift */,
 				6630450D1AD503E50036175E /* Main.storyboard */,
 				663045101AD503E50036175E /* Images.xcassets */,
 				663045121AD503E50036175E /* LaunchScreen.xib */,
 				663045071AD503E50036175E /* Supporting Files */,
+				66D398FA1AD50F6C00682A46 /* SkyPhotoRobotBridgingHeader.h */,
 			);
 			path = SkyPhotoRobot;
 			sourceTree = "<group>";
@@ -110,6 +117,16 @@
 				6630451E1AD503E50036175E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		66D398F91AD50E0000682A46 /* RedBearLabBLE */ = {
+			isa = PBXGroup;
+			children = (
+				66D398F51AD50DFC00682A46 /* BLE.h */,
+				66D398F61AD50DFC00682A46 /* BLE.m */,
+				66D398F71AD50DFC00682A46 /* BLEDefines.h */,
+			);
+			name = RedBearLabBLE;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66D398F81AD50DFC00682A46 /* BLE.m in Sources */,
 				6630450C1AD503E50036175E /* ViewController.swift in Sources */,
 				6630450A1AD503E50036175E /* AppDelegate.swift in Sources */,
 			);
@@ -293,6 +311,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = SkyPhotoRobotBridgingHeader.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -328,6 +347,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = SkyPhotoRobotBridgingHeader.h;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -405,6 +425,7 @@
 				663045251AD503E50036175E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		663045261AD503E50036175E /* Build configuration list for PBXNativeTarget "SkyPhotoRobotTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +434,7 @@
 				663045281AD503E50036175E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
